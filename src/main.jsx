@@ -6,11 +6,34 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Main from './components/Layout/Main.jsx';
+import Home from './components/Home/Home.jsx';
+import Statistics from './components/Statistics/Statistics.jsx';
+import AppliedJob from './components/AppliedJob/AppliedJob.jsx';
+import Blog from './components/Blog/Blog.jsx';
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element:<div>Hello World</div>
+    element:<Main></Main>,
+    children:[
+      {
+        path:'/',
+        element:<Home></Home>,
+      },
+      {
+        path:'statistics',
+        element:<Statistics></Statistics>
+      },
+      {
+        path:'appliedJob',
+        element:<AppliedJob></AppliedJob>
+      },
+      {
+        path:'blog',
+        element:<Blog></Blog>
+      }
+    ]
   }
 ])
 
