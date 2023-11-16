@@ -1,0 +1,22 @@
+.jobFeature {
+    width: 400px;
+    height: 250px;
+    border-radius: 8px;
+    border: 1px solid var(--Dark-06, #E8E8E8);
+
+    font-style: normal;
+    line-height: normal;
+    line-height: 2;
+    padding: 10px 15px;
+}
+
+.jobFeature h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.jobFeature p {
+    color: var(--Dark-03, #757575);
+    font-size: 16px;
+    font-weight: 600;
+}

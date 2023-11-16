@@ -1,0 +1,16 @@
+.page-banner {
+    /* width: 100%; */
+    width: 1020px;
+    height: 200px;
+    flex-shrink: 0;
+    
+}
+
+/* .appliedJobs-container{
+    background-image: url(bg1.png), url(bg2.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+} */
+
