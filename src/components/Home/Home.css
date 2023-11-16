@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+
+/* ---------Banner------- */
 .banner-container h1{
     font-weight: 800;
 }
@@ -15,4 +17,22 @@
     border-radius: 8px;
     background: var(--Linear, linear-gradient(90deg, #7E90FE 0%, #9873FF 100%));
 }
-/* ---------------------- */
+
+/* -------Job Category---------- */
+
+
+
+
+
+/* -------Job Features---------- */
+
+
+
+/* ------Footer-------- */
+footer ul li{
+    font-size: 15px;
+    color:  rgb(156 163 175);;
+}
+footer h4{
+    color: #9873FF;
+}

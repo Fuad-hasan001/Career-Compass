@@ -3,6 +3,7 @@ import './Home.css'
 import { useLoaderData } from 'react-router-dom';
 import Category from '../Category/Category';
 import JobFeatures from '../JobFeatures/JobFeatures';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     const jobCategories = useLoaderData();
@@ -43,47 +44,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <footer>
-                <div>
-                    <h2>Career-Campus</h2>
-                    <p><small>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</small></p>
-                    <img src="" alt="" />
-                </div>
+            <footer >
+                <Footer></Footer>
 
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li><small>About Us</small></li>
-                        <li><small>Work</small> </li>
-                        <li><small>Latest News</small></li>
-                        <li><small>Careers</small></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Product</h4>
-                    <ul>
-                        <li><small>Prototype</small></li>
-                        <li><small>Plans & Pricing</small></li>
-                        <li><small>Customers</small></li>
-                        <li><small>Integrations</small></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Support</h4>
-                    <ul>
-                        <li><small>Help Desk</small>  Desk</li>
-                        <li><small>Sales</small> </li>
-                        <li><small>Become a Partner</small></li>
-                        <li><small>Developers</small></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><small>524 Broadway , NYC</small></li>
-                        <li><small>+1 77 - 978 - 5570</small></li>
-                    </ul>
-                </div>
             </footer>
         </div>
     );
