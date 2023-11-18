@@ -3,7 +3,7 @@
     width: 1020px;
     height: 200px;
     flex-shrink: 0;
-    
+
 }
 
 /* .appliedJobs-container{
@@ -14,3 +14,23 @@
     
 } */
 
+.main-content {
+    border: 1px solid rgba(128, 128, 128, 0.192);
+    border-radius: 10px;
+    width: 70%;
+
+}
+
+.company-logo {
+    background-color: rgba(128, 128, 128, 0.116);
+    width: 100px;
+    padding: 40px 15px;
+}
+
+.btn-job-type {
+    font-weight: bold;
+    padding: 0.2em 1em;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 5px 0;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import './JobFeatures.css'
 
 const JobFeatures = ({ feature }) => {
-    const {id,company_logo,job_title,company_name,remote,location,salary } = feature
+    const {id,company_logo,job_title,company_name,job_type, job_time ,location,salary } = feature
     return (
         <div className='border border-gray-200 rounded-xl text-left p-8 w-full leading-8'>
 
@@ -11,14 +11,14 @@ const JobFeatures = ({ feature }) => {
             <h2><small>{company_name}</small></h2>
 
             <div className='flex justify-start gap-5'>
-                <button className='border-teal-500 font-bold'><small>Remote</small></button>
-                <button className='border-teal-500 font-bold'><small>Full Time</small></button>
+                <button className='border-teal-500 font-bold'><small>{job_type}</small></button>
+                <button className='border-teal-500 font-bold'><small>{job_time}</small></button>
             </div>
 
             <div>
                 <p><small>
                     {location}
-                    <span>Salary : {salary}</span>
+                    <span className='ml-5'>Salary : {salary}</span>
                 </small></p>
             </div>
 

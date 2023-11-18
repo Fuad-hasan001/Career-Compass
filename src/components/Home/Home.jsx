@@ -5,16 +5,18 @@ import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
 import Category from '../Category/Category';
 import JobFeatures from '../JobFeatures/JobFeatures';
+import { ArrowDownOnSquareStackIcon } from '@heroicons/react/24/solid'
+
 
 const Home = () => {
 
     const [categories, setCategories] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('jobCategory.json')
-        .then(response => response.json())
-        .then(data => setCategories(data))
-    },[])
+            .then(response => response.json())
+            .then(data => setCategories(data))
+    }, [])
 
     const features = useLoaderData();
     // console.log(features)
@@ -43,23 +45,30 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='JobFeatures my-12 border border-red-500'>
+            <section className='JobFeatures my-12'>
                 <div>
                     <h2 className='text-xl font-bold'>Featured Jobs</h2>
                     <p><small>Explore thousands of job opportunities with all the information you need. Its your future</small></p>
                 </div>
 
                 <div className='features my-10'>
-                    <div className='grid grid-cols-2 justify-items-center gap-3 mx-20'>
-                        
-                       {
-                        features.map(feature => <JobFeatures
-                        key={feature.id}
-                        feature={feature}
-                        ></JobFeatures>)
-                       }
-                          
+                    <div className='grid grid-cols-2 justify-items-center gap-2 my-5'>
+
+                        {
+                            features.map(feature => <JobFeatures
+                                key={feature.id}
+                                feature={feature}
+                            ></JobFeatures>)
+                        }
+
                     </div>
+
+                    <button className='btn-Apply text-white font-bold'>
+                        <span className='flex'>
+                            View All
+                            <ArrowDownOnSquareStackIcon className="h-6 w-6 text-white" />
+                        </span>
+                    </button>
 
                 </div>
 
