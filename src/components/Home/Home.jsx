@@ -4,13 +4,19 @@ import { useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
 import Category from '../Category/Category';
+import JobFeatures from '../JobFeatures/JobFeatures';
 
 const Home = () => {
 
-    const categories = useLoaderData()
-    // console.log(categories)
+    const [categories, setCategories] = useState([])
 
-    // const features = useLoaderData();
+    useEffect(()=>{
+        fetch('jobCategory.json')
+        .then(response => response.json())
+        .then(data => setCategories(data))
+    },[])
+
+    const features = useLoaderData();
     // console.log(features)
 
     return (
@@ -37,92 +43,22 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='JobFeatures my-10 border border-red-500'>
+            <section className='JobFeatures my-12 border border-red-500'>
                 <div>
                     <h2 className='text-xl font-bold'>Featured Jobs</h2>
                     <p><small>Explore thousands of job opportunities with all the information you need. Its your future</small></p>
                 </div>
 
-                <div className='features'>
+                <div className='features my-10'>
                     <div className='grid grid-cols-2 justify-items-center gap-3 mx-20'>
                         
-                         
-                        {/* <div className='jobFeature text-left'>
-                            <img src="" alt="" />
-                            <h2>Technical Database Engineer <br /><span></span></h2>
-                            <h2><small>Google LLC</small></h2>
-
-                            <div className='flex justify-start gap-5'>
-                                <button className='border-teal-500 font-bold'><small>Remote</small></button>
-                                <button className='border-teal-500 font-bold'><small>Full Time</small></button>
-                            </div>
-
-                            <div>
-                                <p><small>
-                                    Dhaka, Bangladesh
-                                    <span>Salary : 100K - 150K</span>
-                                </small></p>
-                            </div>
-
-                            <button className='btn-primary'><small>View Details</small></button>
-                        </div>
-                        <div className='jobFeature text-left'>
-                            <img src="" alt="" />
-                            <h2>Technical Database Engineer <br /><span></span></h2>
-                            <h2><small>Google LLC</small></h2>
-
-                            <div className='flex justify-start gap-5'>
-                                <button className='border-teal-500 font-bold'><small>Remote</small></button>
-                                <button className='border-teal-500 font-bold'><small>Full Time</small></button>
-                            </div>
-
-                            <div>
-                                <p><small>
-                                    Dhaka, Bangladesh
-                                    <span>Salary : 100K - 150K</span>
-                                </small></p>
-                            </div>
-
-                            <button className='btn-primary'><small>View Details</small></button>
-                        </div>
-                        <div className='jobFeature text-left'>
-                            <img src="" alt="" />
-                            <h2>Technical Database Engineer <br /><span></span></h2>
-                            <h2><small>Google LLC</small></h2>
-
-                            <div className='flex justify-start gap-5'>
-                                <button className='border-teal-500 font-bold'><small>Remote</small></button>
-                                <button className='border-teal-500 font-bold'><small>Full Time</small></button>
-                            </div>
-
-                            <div>
-                                <p><small>
-                                    Dhaka, Bangladesh
-                                    <span>Salary : 100K - 150K</span>
-                                </small></p>
-                            </div>
-
-                            <button className='btn-primary'><small>View Details</small></button>
-                        </div> 
-                        <div className='jobFeature text-left'>
-                            <img src="" alt="" />
-                            <h2>Technical Database Engineer <br /><span></span></h2>
-                            <h2><small>Google LLC</small></h2>
-
-                            <div className='flex justify-start gap-5'>
-                                <button className='border-teal-500 font-bold'><small>Remote</small></button>
-                                <button className='border-teal-500 font-bold'><small>Full Time</small></button>
-                            </div>
-
-                            <div>
-                                <p><small>
-                                    Dhaka, Bangladesh
-                                    <span>Salary : 100K - 150K</span>
-                                </small></p>
-                            </div>
-
-                            <button className='btn-primary'><small>View Details</small></button>
-                        </div>  */}
+                       {
+                        features.map(feature => <JobFeatures
+                        key={feature.id}
+                        feature={feature}
+                        ></JobFeatures>)
+                       }
+                          
                     </div>
 
                 </div>
