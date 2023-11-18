@@ -1,3 +1,7 @@
+/* nav{
+    margin-left: 100px;
+    margin-right: 100px;
+} */
 nav h2 {
     color: #7E90FE;
     border-color: #7E90FE;
@@ -6,10 +10,11 @@ nav h2 {
 .nav-link a {
     margin-left: 20px;
     display: flex;
+    /* background-color: #7e8ffe3b; */
 
 }
 
 .btn-Apply {
-    border-radius: 8px;
+    border-radius: 10px;
     background: var(--Linear, linear-gradient(90deg, #7E90FE 0%, #9873FF 100%));
 }
