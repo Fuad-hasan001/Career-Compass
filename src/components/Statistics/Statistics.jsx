@@ -35,6 +35,7 @@ const Statistics = () => {
                 </div>
             
 
+                {/* ---------PieChart---------- */}
             <div>
                 <PieChart width={1000} height={400}>
                     <Pie

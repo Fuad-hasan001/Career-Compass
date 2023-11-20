@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
-import { useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
 import Category from '../Category/Category';
 import JobFeatures from '../JobFeatures/JobFeatures';
-import { ArrowDownOnSquareStackIcon } from '@heroicons/react/24/solid'
 
 
 const Home = () => {
 
+    // -----------Job Categories: Data Load-------------------
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -17,16 +15,15 @@ const Home = () => {
             .then(response => response.json())
             .then(data => setCategories(data))
     }, [])
-
-    const features = useLoaderData();
-    // console.log(features)
-
+// -Others----------------------
     return (
         <div className='Main-container relative'>
+{/* --Banner section------------------------ */}
             <section className='banner-container'>
                 <Banner></Banner>
             </section>
 
+{/*-Job category----------------- */}
             <section className='JobCategory my-10 '>
                 <div>
                     <h2 className='text-xl font-bold'>Job Category List</h2>
@@ -45,6 +42,7 @@ const Home = () => {
                 </div>
             </section>
 
+{/*--Job Features-------------- */}
             <section className='JobFeatures my-12'>
                 <div>
                     <h2 className='text-xl font-bold'>Featured Jobs</h2>
@@ -52,31 +50,15 @@ const Home = () => {
                 </div>
 
                 <div className='features my-10'>
-                    <div className='grid grid-cols-2 justify-items-center gap-2 my-5'>
-
-                        {
-                            features.map(feature => <JobFeatures
-                                key={feature.id}
-                                feature={feature}
-                            ></JobFeatures>)
-                        }
-
-                    </div>
-
-                    <button className='btn-Apply text-white font-bold'>
-                        <span className='flex'>
-                            View All
-                            <ArrowDownOnSquareStackIcon className="h-6 w-6 text-white" />
-                        </span>
-                    </button>
-
+                    <JobFeatures></JobFeatures>
+                    
                 </div>
-
             </section>
 
-            <footer >
+{/*--Footer section---------------- */}
+            {/* <footer >
                 <Footer></Footer>
-            </footer>
+            </footer> */}
         </div>
     );
 };

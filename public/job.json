@@ -8,13 +8,15 @@
         "job_time": "Full Time",
         "location": "Dhaka, Bangladesh",
         "salary": "70K - 90K",
-        "job_description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+        "job_description": "A 1UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
         "job_responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "educational_requirement": "Bachelor degree to complete any reputable university.",
         "experience": "2-3 Years in this field.",
-        "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
-        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        "Contact_info": {
+            "phone": "01750-00 00 00",
+            "email": "info@gmail.com",
+            "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        }
     },
     {
         "id": 2,
@@ -25,13 +27,15 @@
         "job_time": "Full Time",
         "location": "Dhaka, Bangladesh",
         "salary": "70K - 90K",
-        "job_description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+        "job_description": "A 2UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
         "job_responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "educational_requirement": "Bachelor degree to complete any reputable university.",
         "experience": "2-3 Years in this field.",
-        "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
-        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        "Contact_info": {
+            "phone": "01750-00 00 00",
+            "email": "info@gmail.com",
+            "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        }
     },
     {
         "id": 3,
@@ -42,13 +46,15 @@
         "job_time": "Full Time",
         "location": "Dhaka, Bangladesh",
         "salary": "70K - 90K",
-        "job_description": "A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
+        "job_description": "A 3UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.",
         "job_responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "educational_requirement": "Bachelor degree to complete any reputable university.",
         "experience": "2-3 Years in this field.",
-        "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
-        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        "Contact_info": {
+            "phone": "01750-00 00 00",
+            "email": "info@gmail.com",
+            "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        }
     },
     {
         "id": 4,
@@ -63,9 +69,11 @@
         "job_responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "educational_requirement": "Bachelor degree to complete any reputable university.",
         "experience": "2-3 Years in this field.",
-        "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
-        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        "Contact_info": {
+            "phone": "01750-00 00 00",
+            "email": "info@gmail.com",
+            "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        }
     },
     {
         "id": 5,
@@ -80,9 +88,11 @@
         "job_responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "educational_requirement": "Bachelor degree to complete any reputable university.",
         "experience": "2-3 Years in this field.",
-        "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
-        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        "Contact_info": {
+            "phone": "01750-00 00 00",
+            "email": "info@gmail.com",
+            "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        }
     },
     {
         "id": 6,
@@ -97,8 +107,10 @@
         "job_responsibility": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
         "educational_requirement": "Bachelor degree to complete any reputable university.",
         "experience": "2-3 Years in this field.",
-        "phone": "01750-00 00 00",
-        "email": "info@gmail.com",
-        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        "Contact_info": {
+            "phone": "01750-00 00 00",
+            "email": "info@gmail.com",
+            "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+        }
     }
 ]

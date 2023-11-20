@@ -1,28 +1,43 @@
-import React from 'react';
-import './JobFeatures.css'
+import React, { useEffect, useState } from 'react';
+import { ArrowDownOnSquareStackIcon } from '@heroicons/react/24/solid'
+import Job from '../Job/Job';
 
-const JobFeatures = ({ feature }) => {
-    const {id,company_logo,job_title,company_name,job_type, job_time ,location,salary } = feature
+
+const JobFeatures = () => {
+    // loadData >> heading >> map-job >> btn-viewAll
+
+    const [features, setFeatures] = useState([])
+
+    const [data, setData] = useState(4)
+    useEffect(() => {
+        fetch('job.json')
+            .then(response => response.json())
+            .then(data => setFeatures(data))
+    }, [])
+
+
+    // const handleViewAllBtn =() =>{
+    //     features.slice(0, data).map(job => console.log(job))
+    // }
     return (
-        <div className='border border-gray-200 rounded-xl text-left p-8 w-full leading-8'>
-
-            <img src={company_logo} alt="" />
-            <h2>{job_title}</h2>
-            <h2><small>{company_name}</small></h2>
-
-            <div className='flex justify-start gap-5'>
-                <button className='border-teal-500 font-bold'><small>{job_type}</small></button>
-                <button className='border-teal-500 font-bold'><small>{job_time}</small></button>
+        <div>
+            <div className='grid grid-cols-2 gap-5'>
+                {
+                    features.slice(0, data).map(job => <Job
+                        key={job.id}
+                        job={job}>
+                    </Job>)
+                }
             </div>
 
-            <div>
-                <p><small>
-                    {location}
-                    <span className='ml-5'>Salary : {salary}</span>
-                </small></p>
+            <div className={data.length === features.length ? 'hidden' : ''}>
+                <button onClick={() => setData(features.length)} className='btn-Apply text-white font-bold'>
+                    <span className='flex'>
+                        View All
+                        <ArrowDownOnSquareStackIcon className="h-6 w-6 text-white" />
+                    </span>
+                </button>
             </div>
-
-            <button className='btn-primary'><small>View Details</small></button>
         </div>
     );
 };

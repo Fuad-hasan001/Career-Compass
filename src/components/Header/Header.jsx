@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon, HomeModernIcon } from '@heroicons/react/24/solid'
 
 
 const Header = () => {
+    //------ declare state for hambuger icon-------
     const [open, setOpen] = useState(false);
 
     return (
@@ -19,19 +20,19 @@ const Header = () => {
                         }
                     </span>
                 </div>
-
+                    {/* ----logo----- */}
                 <h2 className='text-xl flex font-extrabold '>
                     Career-<span className='text-cyan-400'>Compass</span>
                 </h2>
             </div>
-
+                        {/*---------- Navigation------ */}
             <div className='flex'>
                 <ul className={`nav-link sm:flex absolute md:static duration-500 py-2 ${open ? 'top-14 left-5' : '-top-36 left-5'}`}>
                     <ActiveLink to='/'><HomeModernIcon className="h-6 w-6 text-blue-500" /></ActiveLink>
                     <ActiveLink to='/statistics'>Statistics</ActiveLink>
                     <ActiveLink to='/appliedJob'>Applied Job</ActiveLink>
                     <ActiveLink to='/blogs'>Blog</ActiveLink>
-                    <ActiveLink to='/details'>Job Details</ActiveLink>
+                    <ActiveLink to='/features'>Features</ActiveLink>
                 </ul>
 
             </div>
