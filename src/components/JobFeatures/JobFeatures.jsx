@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowDownOnSquareStackIcon } from '@heroicons/react/24/solid'
 import Job from '../Job/Job';
+import { useLoaderData } from 'react-router-dom';
 
 
 const JobFeatures = () => {
@@ -15,10 +16,6 @@ const JobFeatures = () => {
             .then(data => setFeatures(data))
     }, [])
 
-
-    // const handleViewAllBtn =() =>{
-    //     features.slice(0, data).map(job => console.log(job))
-    // }
     return (
         <div>
             <div className='grid grid-cols-2 gap-5'>

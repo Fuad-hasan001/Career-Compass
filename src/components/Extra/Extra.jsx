@@ -4,111 +4,66 @@ const Extra = () => {
     return (
        <div>
          <div>
-            {/* jobFeatures------------ */}
-            {/* import React from 'react';
-            import {useLoaderData} from 'react-router-dom';
-            import JobFeature from '../JobFeature/JobFeature';
-const JobFeatures = () => {
-    const features = useLoaderData()
-            return (
-            <div>
-                <h2>Job features: {features.length}</h2>
-                <div className='grid grid-cols-2 gap-5'>
-                    {
-                        features.map(feature => <JobFeature
-                            key={feature.id}
-                            feature={feature}
-                        ></JobFeature>
-                        )
-                    }
+                <p><small><span className='font-bold'>Job Description:</span> {}</small></p>
+
+                <p><small><span className='font-bold'>Job Responsibility:</span> {}</small></p>
+
+                <div>
+                    <h3 className='font-bold'>Educational Requirements:</h3>
+                    <p><small>Bachelor degree to complete any reputational university.</small></p>
+                </div>
+
+                <div>
+                    <h3 className='font-bold'>Experiences:</h3>
+                    <p><small>2-3 Years in this field.</small></p>
                 </div>
             </div>
-            );
-};
-
-            export default JobFeatures; */}
-        
 
 
-        </div>
 
+            <div className='side details grid'>
+                <div className='bg-cyan-50 rounded-3xl mb-3 p-5'>
+                    <div>
+                        <h3 className='font-bold'>Job Details</h3>
+                        <hr />
+                        <p><small>
+                            <CurrencyDollarIcon className="h-4 w-4 text-purple-400" />
+                            <span className='font-bold'>
+                                Salary :</span> {} (Per Month)
+                        </small></p>
+                        <p><small>
+                            <CalendarDaysIcon className="h-4 w-4 text-purple-400" />
+                            <span className='font-bold'>Job Title :</span>  Product Designer
+                        </small></p>
+                    </div>
+                    <div>
+                        <h3 className='font-bold'>Contact Information</h3>
+                        <hr />
+                        <p><small>
+                            < PhoneIcon className="h-4 w-4 text-purple-400" />
+                            <span className='font-bold'>Phone :</span> 01750-00 00 00
+                        </small></p>
 
-       <div>  {/*
-        import React from 'react';
-import './JobFeature.css'
-import { Link } from 'react-router-dom';
+                        <p><small>
+                            <EnvelopeIcon className="h-4 w-4 text-purple-400" />
+                            <span className='font-bold'>Email :</span> info@gmail.com
+                        </small></p>
 
-const JobFeature = ({ feature }) => {
-    // console.log(feature)
-    const {id,company_logo,job_title,company_name,job_type, job_time ,location,salary } = feature
+                        <span className='flex gap-1'>
+                            <MapPinIcon className="h-8 w-5 text-purple-400" />
+                            <small>
+                                <span className='font-bold'>
+                                    Address :</span> Dhanmondi 32, Sukrabad
+                                Dhaka, Bangladesh
+                            </small>
+                        </span>
+                    </div>
+                </div>
 
-    return (
-        <div className='border border-gray-200 rounded-xl text-left p-8 w-full leading-8'>
-
-            <img src={company_logo} alt="" />
-            <h2>{job_title}</h2>
-            <h2><small>{company_name}</small></h2>
-
-            <div className='flex justify-start gap-5'>
-                <button className='border-teal-500 font-bold'><small>{job_type}</small></button>
-                <button className='border-teal-500 font-bold'><small>{job_time}</small></button>
+                <button className='btn-Apply font-bold text-white'>Apply Now</button>
             </div>
 
-            <div>
-                <p><small>
-                    {location}
-                    <span className='ml-5'>Salary : {salary}</span>
-                </small></p>
-            </div>
 
-            <button className='btn-primary'><Link to={`jobFeature/${id}`}>View Details</Link></button>
-        </div>
-    );
-};
-
-export default JobFeature;*/}
-        </div> 
-
-            
-
-         <div>
-       {/* import React from 'react';
-import './JobDetails.css'
-import { CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid'
-import { useLoaderData } from 'react-router-dom';
-
-const JobDetails = () => {
-    const jobDetails = useLoaderData();
-    console.log(jobDetails)
-    return (
-        <div>
-            <h1 className='font-bold text-2xl'>Everything about Job Details</h1>
-            
-        </div>
-    );
-};
-
-export default JobDetails;*/}
-
-        </div> 
-
-        <h2>details page css style</h2>
-        <div>
- .details-container{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    text-align: left;
-    line-height:32px;
-}
-.details p small{
-    display: flex;
-    align-items: center;
-    gap: 5px;
- display: grid;
-    
-} 
-        </div>
 
        </div>
     );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Job = ({job}) => {
     // data receive >> display part >> btn-view details 
     const {id,company_logo,job_title,company_name,job_type,job_time ,location, salary} = job
+    
     return (
         <div className='border border-gray-200 rounded-xl text-left p-8 w-full leading-8'>
 
@@ -22,8 +23,9 @@ const Job = ({job}) => {
                     <span className='ml-5'>Salary : {salary}</span>
                 </small></p>
             </div>
+            
+            <Link to={`/job/jobDetails/${id}`}><button className='btn-primary'>View Details</button></Link>
 
-            <button className='btn-primary'><Link to={`/job/${id}`}>View Details</Link></button>
         </div>
     );
 };

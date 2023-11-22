@@ -32,7 +32,6 @@ const Header = () => {
                     <ActiveLink to='/statistics'>Statistics</ActiveLink>
                     <ActiveLink to='/appliedJob'>Applied Job</ActiveLink>
                     <ActiveLink to='/blogs'>Blog</ActiveLink>
-                    <ActiveLink to='/features'>Features</ActiveLink>
                 </ul>
 
             </div>

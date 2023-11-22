@@ -12,15 +12,18 @@ import Statistics from './components/Statistics/Statistics.jsx';
 import AppliedJob from './components/AppliedJob/AppliedJob.jsx';
 import Blogs from './components/Blogs/Blogs.jsx';
 import JobDetail from './components/JobDetail/JobDetail.jsx';
+import JobFeatures from './components/JobFeatures/JobFeatures.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:() => fetch('job.json')
       },
       {
         path: 'statistics',
@@ -35,9 +38,30 @@ const router = createBrowserRouter([
         element: <AppliedJob></AppliedJob>
       },
       {
-        path: 'job/:jobId',
+        path:'jobFeatures',
+        element: <JobFeatures></JobFeatures>,
+      },
+
+      {
+        path: 'job/jobDetails/:id',
         element:<JobDetail></JobDetail>,
-        loader:() => fetch('job.json')
+        // loader:({params}) => fetch(`job.json${(params.id).json}`)
+        loader:async ({ params }) => {
+          try {
+            const response = await fetch(`job.json/${params.id}`);
+            
+            if (!response.ok) {
+              throw new Error(`Error loading data: ${response.json()}`);
+            }
+      
+            const data = await response.json();
+            return data;
+          } catch (error) {
+            console.error(error);
+            // Handle the error appropriately, e.g., show an error message
+            throw error;
+          }
+        }
       }
      
       
