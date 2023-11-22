@@ -45,32 +45,8 @@ const router = createBrowserRouter([
       {
         path: 'job/jobDetails/:id',
         element:<JobDetail></JobDetail>,
-        // loader:({params}) => fetch(`job.json${(params.id).json}`)
-        loader:async ({ params }) => {
-          try {
-            const response = await fetch(`job.json/${params.id}`);
-            
-            if (!response.ok) {
-              throw new Error(`Error loading data: ${response.json()}`);
-            }
-      
-            const data = await response.json();
-            return data;
-          } catch (error) {
-            console.error(error);
-            // Handle the error appropriately, e.g., show an error message
-            throw error;
-          }
-        }
+        loader:({params}) => fetch(`job.json${params.id}`)
       }
-     
-      
-
-
-      
-      
-
-      
     ]
   }
 ])
